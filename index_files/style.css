@@ -1,0 +1,108 @@
+/* 프린트로 pdf 만들때 배경색 살리기.
+@media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}*/
+
+/* 1-1. 동그라미 숫자 */
+@counter-style circle-numbers {
+    system: fixed;
+    symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳;
+    suffix: " "; /* 숫자 뒤에 붙을 공백이나 기호 */
+}
+
+/* 1-2. 리스트에 적용 */
+ol.custom-list {
+    list-style: circle-numbers;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* 2-1. 검정 바탕에 흰글자 동그라미 숫자 */
+@counter-style solid-numbers {
+    system: fixed;
+    symbols: ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ ⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴;
+    suffix: " "; /* 숫자 뒤에 붙을 공백이나 기호 */
+}
+
+/* 2-2. 리스트에 적용 */
+ol.solid-list {
+    list-style: solid-numbers;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* 3-1. 검정 바탕에 흰글자 동그라미 숫자 */
+@counter-style dot-numbers {
+    system: fixed;
+    symbols: • • • • • • • • • • • • • • • • • • • • • • • • •;
+    suffix: " "; /* 숫자 뒤에 붙을 공백이나 기호 */
+}
+
+/* 3-2. 리스트에 적용 */
+ol.dot-list {
+    list-style: dot-numbers;
+    padding-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+ol.dot-list li {
+    margin-bottom: 4px; /* 항목 간의 위아래 간격을 촘촘하게 */
+    line-height: 1.4;   /* 줄바꿈 시 행간을 줄임 */
+}
+
+/* 4-1. 검정 바탕에 흰글자 동그라미 숫자 */
+@counter-style num-numbers {
+    system: fixed;
+    symbols: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;
+    suffix: ". "; /* 숫자 뒤에 붙을 공백이나 기호 */
+}
+
+/* 4-2. 리스트에 적용 */
+ol.num-list {
+    list-style: num-numbers;
+    padding-left: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+}
+
+ol.num-list li {
+    margin-bottom: 4px; /* 항목 간의 위아래 간격을 촘촘하게 */
+    line-height: 1.4;   /* 줄바꿈 시 행간을 줄임 */
+}
+
+.box6 {
+    display: table; /* 또는 width: fit-content; */
+    background: #FAFAFA;
+    border: 1px solid #718096; 
+    padding: 4px;
+    margin: 0 4px; /* 두번째 값은 box 왼쪽 여백*/
+    margin-bottom: 3px;
+    /*letter-spacing: -1.2px;단어와 단어 사이(공백)를 줄이기*/
+    line-height: 1.5;     
+     
+}
+
+.highlight-blue { /* 형광펜기능 #b8d0ec #d3e2f5 #E1F0FF */ 
+        /*background-color: #E2F5D3; /* 연한 연두색 배경 */
+        background-color: #E1F0FF; /* 연한 파랑색 배경 */
+        padding: 1px 2px;          /* 글자 주변 여백 */
+        border-radius: 3px;        /* 모서리 살짝 둥글게 */
+    }
+
+.code-box { /* 코드 될까? */
+    background-color: #fafafa;
+    border-radius: 4px;
+    padding: 4px;
+    font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-x: auto;
+    color: #010101;
+}    
